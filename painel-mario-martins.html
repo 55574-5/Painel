@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel — EMEB Mario Martins</title>
+<style>
+  :root{
+    --bg: #F7F5F0;
+    --ink: #2B2A28;
+    --ink-soft: #6B6862;
+    --line: #E2DED4;
+    --accent: #B5562B;
+    --accent-soft: #F0E4DA;
+    --card: #FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height:1.5;
+    padding: 48px 20px 80px;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; }
+
+  header{
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 16px;
+  }
+  header .eyebrow{
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  header h1{
+    margin: 6px 0 0;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  section{ margin-bottom: 34px; }
+
+  h2{
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin: 0 0 14px;
+    display:flex;
+    align-items:center;
+    gap: 8px;
+  }
+
+  .card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+
+  /* Horários */
+  .schedule-block{ margin-bottom: 22px; }
+  .schedule-block:last-child{ margin-bottom: 0; }
+  .schedule-title{
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  table{ width:100%; border-collapse: collapse; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-size: 14px;}
+  table tr{ border-top: 1px solid var(--line); }
+  table tr:first-child{ border-top: none; }
+  table td{ padding: 8px 0; }
+  table td.day{ color: var(--ink-soft); width: 40%; }
+  table td.time{ font-weight: 600; text-align:right; }
+
+  .single-line{
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  /* Links */
+  .links{ display:flex; flex-direction:column; }
+  .link-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 16px;
+    padding: 13px 0;
+    border-top: 1px solid var(--line);
+    text-decoration:none;
+    color: var(--ink);
+  }
+  .link-row:first-child{ border-top:none; }
+  .link-row:hover .link-label{ color: var(--accent); }
+  .link-label{
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    transition: color .15s ease;
+  }
+  .link-arrow{
+    font-size: 16px;
+    color: var(--accent);
+    flex-shrink:0;
+  }
+
+  /* Rede/senhas */
+  .net-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+  }
+  .net-row:first-child{ border-top:none; }
+  .net-name{ color: var(--ink-soft); }
+  .net-pass{
+    font-weight: 700;
+    background: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 13px;
+  }
+
+  footer{
+    margin-top: 50px;
+    text-align:center;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 480px){
+    body{ padding: 32px 14px 60px; }
+    header h1{ font-size: 24px; }
+    .card{ padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">EMEB Mario Martins de Almeida</div>
+    <h1>Painel de referência</h1>
+  </header>
+
+  <section>
+    <h2>🕐 Horário — CP Tati</h2>
+    <div class="card">
+      <table>
+        <tr><td class="day">2ª feira</td><td class="time">12h30 às 18h30</td></tr>
+        <tr><td class="day">3ª feira</td><td class="time">10h às 18h + HTPC</td></tr>
+        <tr><td class="day">4ª feira</td><td class="time">7h às 16h</td></tr>
+        <tr><td class="day">5ª feira</td><td class="time">7h às 16h</td></tr>
+        <tr><td class="day">6ª feira</td><td class="time">9h30 às 18h30</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>🕐 Horário — PAPP TECCI Claudia</h2>
+    <div class="card">
+      <table>
+        <tr><td class="day">Segunda</td><td class="time">8h às 17h</td></tr>
+        <tr><td class="day">Terça</td><td class="time">13h às 21h40</td></tr>
+        <tr><td class="day">Quarta</td><td class="time">8h às 17h</td></tr>
+        <tr><td class="day">Quinta</td><td class="time">8h às 17h</td></tr>
+        <tr><td class="day">Sexta</td><td class="time">8h às 17h</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔗 Links e documentos</h2>
+    <div class="card">
+      <div class="links">
+        <a class="link-row" href="https://docs.google.com/document/d/19OmCFqofrD3nLrzEV_Et_xos01MurPkKip-T7-oCsFA/edit?tab=t.x9ib72hzcpn4" target="_blank">
+          <span class="link-label">👩🏻‍💻 Planejamento Educação Digital</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://secretariadaeducacao.my.canva.site/portf-lio-2026-papptecci-claudia-lotufo" target="_blank">
+          <span class="link-label">Portfólio PAPP TECCI — Claudia</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://docs.google.com/spreadsheets/d/1rlIiebMhgR-1s5wIgR4s2DXLxQXQr9yE/edit?usp=drive_link&ouid=103628233692920531566&rtpof=true&sd=true" target="_blank">
+          <span class="link-label">📌 Agendamento Espaço Maker</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://emebmariomartinsdealmeida.blogspot.com/" target="_blank">
+          <span class="link-label">📍 Blog oficial da escola</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://www.instagram.com/emebmariomartins_oficial/" target="_blank">
+          <span class="link-label">📍 Instagram da escola</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://docs.google.com/spreadsheets/d/18JqK7FfFpRyAn6wJPIJR9wBfToMqUw1LZ3fpMfSfexw/edit?usp=sharing" target="_blank">
+          <span class="link-label">📋 Formulário de Busca Ativa | 2026</span>
+          <span class="link-arrow">↗</span>
+        </a>
+        <a class="link-row" href="https://drive.google.com/drive/folders/18LFQV-Wm9VUdnaD85TpTITYQDTujc4pH" target="_blank">
+          <span class="link-label">🧩 Atividades adaptadas</span>
+          <span class="link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🕹️ Redes Wi-Fi</h2>
+    <div class="card">
+      <div class="net-row">
+        <span class="net-name">WIFI_MARIO_MARTINS_ALUNOS / Chrome_alunos</span>
+        <span class="net-pass">##Chr0m&_@lun02022</span>
+      </div>
+      <div class="net-row">
+        <span class="net-name">Mario Martins</span>
+        <span class="net-pass">19092022</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>Painel de uso interno — EMEB Mario Martins de Almeida</footer>
+
+</div>
+</body>
+</html>
